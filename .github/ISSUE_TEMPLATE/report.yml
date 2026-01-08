@@ -21,6 +21,15 @@ body:
       placeholder: Example Toon Name
     validations:
       required: true
+      
+    - type: input
+    id: toon_id
+    attributes:
+      label: Toon ID
+      description: Exact in-game Toon ID
+      placeholder: TTID-XXXX-YYYY
+    validations:
+      required: false
 
   - type: input
     id: locations
