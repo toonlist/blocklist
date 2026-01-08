@@ -44,7 +44,7 @@ body:
     id: dates
     attributes:
       label: Date(s) & Time(s) Observed
-      description: Use UTC if possible
+      description: Use your timezone or Tootown time if possible
       placeholder: 2026-01-05 18:00–21:00 UTC
     validations:
       required: true
