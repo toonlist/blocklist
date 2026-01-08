@@ -1,0 +1,137 @@
+name: Player Report (Toontown Rewritten)
+description: Submit an evidence-based report for a Toontown Rewritten player list entry
+title: "[Report]: <Toon Name>"
+labels:
+  - report
+  - toontown-rewritten
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Important**
+        This repository is community-maintained and **not affiliated with Toontown Rewritten staff**.
+        Reports are informational only and help players decide who they personally wish to block.
+        Submissions must be factual, evidence-based, and describe **patterns of behavior**, not single incidents.
+
+  - type: input
+    id: toon_name
+    attributes:
+      label: Toon Name
+      description: Exact in-game name (case-sensitive if possible)
+      placeholder: Example Toon Name
+    validations:
+      required: true
+
+  - type: input
+    id: locations
+    attributes:
+      label: District / Location(s)
+      description: Where the behavior was observed (districts, playgrounds, buildings, etc.)
+      placeholder: Hiccup Hills, Donald's Dock
+    validations:
+      required: false
+
+  - type: input
+    id: dates
+    attributes:
+      label: Date(s) & Time(s) Observed
+      description: Use UTC if possible
+      placeholder: 2026-01-05 18:00–21:00 UTC
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: behavior_category
+    attributes:
+      label: Behavior Category
+      description: Select all that apply
+      options:
+        - label: Non-genuine / automated behavior
+        - label: Repeated spamming
+        - label: Disruptive or griefing behavior
+        - label: Harassment or unfriendly conduct
+        - label: Suspected botting, macros, or exploits
+        - label: Other (explain below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed_explanation
+    attributes:
+      label: Detailed Explanation
+      description: |
+        A detailed explanation is encouraged.
+        Describe what happened, how often, over what time span, and why it appears disruptive or non-genuine.
+        Focus on observable behavior, not intent or personal opinions.
+      placeholder: |
+        Example:
+        Over multiple days, the toon repeated identical movement paths across districts,
+        ignored interaction attempts, and performed the same actions every 30 seconds for several hours.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pattern_confirmation
+    attributes:
+      label: Pattern Confirmation
+      description: Confirm that this is not a single incident
+      options:
+        - label: Observed on multiple occasions
+        - label: Observed by multiple players
+        - label: Repeated across districts or sessions
+    validations:
+      required: true
+
+  - type: textarea
+    id: pattern_details
+    attributes:
+      label: Pattern Details
+      description: Briefly explain how this demonstrates a repeated pattern of behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence (Required)
+      description: |
+        Provide links to screenshots, videos, or logs.
+        Personal information must be redacted.
+        Reports without evidence will be rejected.
+      placeholder: |
+        - Screenshot link:
+        - Video link:
+        - Log excerpt:
+    validations:
+      required: true
+
+  - type: textarea
+    id: tos_alignment
+    attributes:
+      label: Toontown Rewritten ToS / Code of Conduct Alignment
+      description: |
+        Explain how the behavior conflicts with Toontown Rewritten rules
+        (e.g. spam, harassment, cheating, unfriendly conduct, automation).
+        Exact clause citations are not required.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context (Optional)
+      description: Any extra information that may help reviewers understand the situation
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I confirm this report is accurate to the best of my knowledge
+          required: true
+        - label: I understand this list is community-maintained and not official moderation
+          required: true
+        - label: I agree this report is for informational purposes only and not for harassment
+          required: true
